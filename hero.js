@@ -2,16 +2,26 @@
 
     const hero = Snap('#hero');
 
+    let i = 0;
+
+    // let используем потому-что она может изменяться. const изменяться не может
+
 
    
 
 
-    function drawCircle(color) {
+    function drawCircle() {
+
+        i = i + 15;
+        // каждый раз i будет увеличиваться на 15
+
+        let hue = i % 360;
+        let color = Snap.hsl(hue, 100, 40);
 
         const vw = window.innerWidth;
         const vh = window.innerHeight;
 
-        const radius = Math.floor( Math.sqrt((vw ** 2) + (vh ** 2)) / 2);
+        const radius = Math.floor( Math.sqrt((vw ** 2) + (vh ** 2)) / 2) + 150;
         // Теорема Пифагора
         // ** - значек степени 
         // Math.sqrt - корень
@@ -24,10 +34,13 @@
         // Выводит в консоль размер окошка браузера
 
         const circle = hero.circle('50%' , '50%' , 50);
-        // Создание круга по параметрам. 1 и 2 - отступы. 3 - размер 
+        // Создание круга по пар    аметрам. 1 и 2 - отступы. 3 - размер 
         circle.attr({
+            // fill: 'aquamarine',
             fill: color
             // fill - заливает цветом
+            // stroke: 'purple'
+            // ободок 
         });
     
         circle.animate({ r: radius}, 6000 , function () {
@@ -41,8 +54,8 @@
 
     }
 
-    drawCircle('aquamarine');
-    // цвет
+    // drawCircle('aquamarine');
+    // Функция "нарисовать круг" и параметр - цвет
 
     // const a = 1;
     // const b = 2;
@@ -62,5 +75,7 @@
 
     // let result = addNumbers(12 , 1);
 
+    setInterval(drawCircle, 1000);
 
+    // Интервал рисования круга и время интервала в милисекундах
 })();

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=block');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,8 +8,10 @@
 }
 
 :root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (max-width: 600px) {
@@ -27,6 +29,14 @@
 header {
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0  0 3rem rgba(0 , 0 , 0 ,0.8);
+ /* 1- горизонтальный , 2 -вертикальный , 3 - blur , 4 - цвет  */
+ /* БЕЗ ЗАПЯТЫХ */
+ z-index: 2;
 }
 
 #hero {
@@ -36,4 +46,76 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+header div {
+  position: relative;
+  color: #fff;
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+
+header p {
+  font-size: 1.4rem;    
+}
+
+section {
+  padding: 6rem 1rem;
+}
+
+#intro {
+  /* если id - то выделяем хештегом */
+  background-image: linear-gradient(to right bottom, #261C5C, #8566FF);
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+#intro p {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0.5rem;
+}
+
+.button {
+  /* так выделяем классы */
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 1.6rem 2.2rem;
+  font-size: 1.1rem;
+  margin: 1.5rem;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+#intro div {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  #intro div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#intro svg {
+  display: block;
+  width: 8rem;
+  margin: 1.5rem;
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2;
 }
