@@ -1,214 +1,225 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&display=swap');
 
 * {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+margin: 0;
+padding: 0;
 }
 
 :root {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  text-align: center;
-  text-transform: uppercase;
+font-family: 'Montserrat', sans-serif;
+font-size: 18px;
+text-align: center;
+text-transform: uppercase;
 }
 
 @media (max-width: 600px) {
-  :root {
-    font-size: 16px;
-  }
+:root {
+  font-size: 16px;
+}
 }
 
 @media (max-width: 420px) {
-  :root {
-    font-size: 14px;
-  }
+:root {
+  font-size: 14px;
+}
 }
 
 header {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  box-shadow: 0  0 3rem rgba(0 , 0 , 0 ,0.8);
- /* 1- горизонтальный , 2 -вертикальный , 3 - blur , 4 - цвет  */
- /* БЕЗ ЗАПЯТЫХ */
- z-index: 2;
+height: 100vh;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+box-shadow: 0  0 3rem rgba(0 , 0 , 0 ,0.8);
+/* 1- горизонтальный , 2 -вертикальный , 3 - blur , 4 - цвет  */
+/* БЕЗ ЗАПЯТЫХ */
+z-index: 2;
 }
 
 #hero {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 header div {
-  position: relative;
-  color: #fff;
+position: relative;
+color: #fff;
 }
 
 header h1 {
-  font-weight: 900;
-  font-size: 3.2rem;
-  letter-spacing: -1px;
-  white-space: nowrap;
+font-weight: 900;
+font-size: 3.2rem;
+letter-spacing: -1px;
+white-space: nowrap;
 }
 
 
 header p {
-  font-size: 1.4rem;    
+font-size: 1.4rem;    
 }
 
 section {
-  padding: 6rem 1rem;
+padding: 6rem 1rem;
 }
 
 #intro {
-  /* если id - то выделяем хештегом */
-  background-image: linear-gradient(to right bottom, #261C5C, #8566FF);
-  color: #fff;
-  position: relative;
-  z-index: 1;
+/* если id - то выделяем хештегом */
+background-image: linear-gradient(to right bottom, #261C5C, #8566FF);
+color: #fff;
+position: relative;
+z-index: 1;
 }
 
 #intro p {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0.5rem;
+font-size: 3rem;
+font-weight: 800;
+margin: 0.5rem;
 }
 
 .button {
-  /* так выделяем классы */
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  border: 2px solid white;
-  padding: 1.6rem 2.2rem;
-  font-size: 1.1rem;
-  margin: 1.5rem;
-  transition: all 0.3s;
+/* так выделяем классы */
+display: inline-block;
+color: #fff;
+text-decoration: none;
+border: 2px solid white;
+padding: 1.6rem 2.2rem;
+font-size: 1.1rem;
+margin: 1.5rem;
+transition: all 0.3s;
 }
 
 .button:hover {
-  transform: scale(1.1);
+transform: scale(1.1);
 }
 
 #intro div {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 @media (max-width: 800px) {
-  #intro div {
-    flex-direction: column;
-    align-items: center;
-  }
+#intro div {
+  flex-direction: column;
+  align-items: center;
+}
 }
 
 #intro svg {
-  display: block;
-  width: 8rem;
-  margin: 1.5rem;
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 2;
+display: block;
+width: 8rem;
+margin: 1.5rem;
+fill: transparent;
+stroke: #fff;
+stroke-width: 2;
 }
 
 #icon-knob line {
-  animation: rotate 5s infinite linear;
-  /* поворот по кругу в течении 5 секунд , бесконечно , с одинаковой скоростью  */
-  transform-origin: center;
+animation: rotate 5s infinite linear;
+/* поворот по кругу в течении 5 секунд , бесконечно , с одинаковой скоростью  */
+transform-origin: center;
 }
 
 @keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+100% {
+  transform: rotate(360deg);
+}
 }
 
 #icon-kick circle:last-child {
-  animation: pulse 500ms infinite ease-out;
-  /* Пульсация , бесконечная , замедляющаяся)) */
+animation: pulse 500ms infinite ease-out;
+/* Пульсация , бесконечная , замедляющаяся)) */
 }
 
 @keyframes pulse {
-  10% {
-    r: 0;
-  }
-  100% {
-    r: 30;
-  }
-  /* зависимость радиуса от времени анимации */
+10% {
+  r: 0;
+}
+100% {
+  r: 30;
+}
+/* зависимость радиуса от времени анимации */
 }
 
 
 #icon-equalizer line {
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-out; 
-  animation-direction: alternate;
-  transform-origin: center bottom;
-  transform-box: fill-box;
+animation-iteration-count: infinite;
+animation-timing-function: ease-out; 
+animation-direction: alternate;
+transform-origin: center bottom;
+transform-box: fill-box;
 } 
 
 
 #icon-equalizer line:nth-of-type(1) {
-  animation-name: eq-a;
-  animation-duration: 400ms;
+animation-name: eq-a;
+animation-duration: 400ms;
 }
 
 #icon-equalizer line:nth-of-type(2) {
-  animation-name: eq-b;
-  animation-duration: 800ms;
+animation-name: eq-b;
+animation-duration: 800ms;
 }
 
 #icon-equalizer line:nth-of-type(3) {
-  animation-name: eq-c;
-  animation-duration: 700ms;
+animation-name: eq-c;
+animation-duration: 700ms;
 }
 
 #icon-equalizer line:nth-of-type(4) {
-  animation-name: eq-d;
-  animation-duration: 8000ms;
+animation-name: eq-d;
+animation-duration: 8000ms;
 }
 
 #icon-equalizer line:nth-of-type(5) {
-  animation-name: eq-e;
-  animation-duration: 300ms;
+animation-name: eq-e;
+animation-duration: 300ms;
 }
 
 
 @keyframes eq-a {
-  0%  { transform: scale(1, 0.5); }
-  50% { transform: scale(1, 0.8); }
-  100%{ transform: scale(1, 0.3); }
+0%  { transform: scale(1, 0.5); }
+50% { transform: scale(1, 0.8); }
+100%{ transform: scale(1, 0.3); }
 }
 
 @keyframes eq-b {
-  0%  { transform: scale(1, 1); }
-  50% { transform: scale(1, 1.1); }
-  100%{ transform: scale(1, 0.7); }
+0%  { transform: scale(1, 1); }
+50% { transform: scale(1, 1.1); }
+100%{ transform: scale(1, 0.7); }
 }
 
 @keyframes eq-c {
-  0%  { transform: scale(1, 1); }
-  50% { transform: scale(1, 1.4); }
-  100%{ transform: scale(1, 0.6); }
+0%  { transform: scale(1, 1); }
+50% { transform: scale(1, 1.4); }
+100%{ transform: scale(1, 0.6); }
 }
 
 @keyframes eq-d {
-  0%  { transform: scale(1, 1); }
-  50% { transform: scale(1, 1.8); }
-  100%{ transform: scale(1, 0.8); }
+0%  { transform: scale(1, 1); }
+50% { transform: scale(1, 1.8); }
+100%{ transform: scale(1, 0.8); }
 }
 
 @keyframes eq-e {
-  0%  { transform: scale(1, 1); }
-  50% { transform: scale(1, 1.2); }
-  100%{ transform: scale(1, 0.7); }
+0%  { transform: scale(1, 1); }
+50% { transform: scale(1, 1.2); }
+100%{ transform: scale(1, 0.7); }
+}
+
+h2 {
+font-size: 1.6rem;
+}
+
+#lineup img {
+display: block;
+max-width: 340px;
+border-radius: 50%;
+margin: 6rem auto;
 }
