@@ -119,3 +119,96 @@ section {
   stroke: #fff;
   stroke-width: 2;
 }
+
+#icon-knob line {
+  animation: rotate 5s infinite linear;
+  /* поворот по кругу в течении 5 секунд , бесконечно , с одинаковой скоростью  */
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#icon-kick circle:last-child {
+  animation: pulse 500ms infinite ease-out;
+  /* Пульсация , бесконечная , замедляющаяся)) */
+}
+
+@keyframes pulse {
+  10% {
+    r: 0;
+  }
+  100% {
+    r: 30;
+  }
+  /* зависимость радиуса от времени анимации */
+}
+
+
+#icon-equalizer line {
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out; 
+  animation-direction: alternate;
+  transform-origin: center bottom;
+  transform-box: fill-box;
+} 
+
+
+#icon-equalizer line:nth-of-type(1) {
+  animation-name: eq-a;
+  animation-duration: 400ms;
+}
+
+#icon-equalizer line:nth-of-type(2) {
+  animation-name: eq-b;
+  animation-duration: 800ms;
+}
+
+#icon-equalizer line:nth-of-type(3) {
+  animation-name: eq-c;
+  animation-duration: 700ms;
+}
+
+#icon-equalizer line:nth-of-type(4) {
+  animation-name: eq-d;
+  animation-duration: 8000ms;
+}
+
+#icon-equalizer line:nth-of-type(5) {
+  animation-name: eq-e;
+  animation-duration: 300ms;
+}
+
+
+@keyframes eq-a {
+  0%  { transform: scale(1, 0.5); }
+  50% { transform: scale(1, 0.8); }
+  100%{ transform: scale(1, 0.3); }
+}
+
+@keyframes eq-b {
+  0%  { transform: scale(1, 1); }
+  50% { transform: scale(1, 1.1); }
+  100%{ transform: scale(1, 0.7); }
+}
+
+@keyframes eq-c {
+  0%  { transform: scale(1, 1); }
+  50% { transform: scale(1, 1.4); }
+  100%{ transform: scale(1, 0.6); }
+}
+
+@keyframes eq-d {
+  0%  { transform: scale(1, 1); }
+  50% { transform: scale(1, 1.8); }
+  100%{ transform: scale(1, 0.8); }
+}
+
+@keyframes eq-e {
+  0%  { transform: scale(1, 1); }
+  50% { transform: scale(1, 1.2); }
+  100%{ transform: scale(1, 0.7); }
+}
